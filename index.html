@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BudgetBunch: a shared budget for your household</title>
+<meta name="description" content="One monthly budget and one expense list for couples, families and housemates, plus a planner that settles trips and dinners.">
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://budgetbunch.com/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="BudgetBunch: a shared budget for your household">
+<meta property="og:description" content="One monthly budget and one expense list for couples, families and housemates, plus a planner that settles trips and dinners.">
+<meta property="og:image" content="https://budgetbunch.com/assets/img/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0A0A0F">
+<link rel="icon" type="image/png" href="assets/img/icon-64.png">
+<link rel="apple-touch-icon" href="assets/img/icon-180.png">
+<link rel="preload" href="assets/fonts/urbanist-light.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body class="home">
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <div class="wrap top-row">
+    <a class="brand" href="index.html"><img src="assets/img/icon-180.png" alt="" width="34" height="34">BudgetBunch</a>
+    <nav aria-label="Main">
+      <a class="wide" href="index.html#how">How it works</a>
+      <a class="wide" href="index.html#membership">Free and membership</a>
+      <a href="support.html">Support</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<section class="hero">
+  <div class="wrap hero-row">
+    <div class="hero-copy">
+      <h1>One budget, on everyone’s phone.</h1>
+      <p class="lead">BudgetBunch is a shared budget for couples, families and housemates. When someone adds an expense, what’s left this month updates for the whole household.</p>
+      <p class="soon">Coming soon to iPhone and Android</p>
+    </div>
+
+    <div class="demo" id="demo" role="group" aria-label="Demo: two phones in one household">
+      <div class="phones">
+        <div class="phone" data-who="John Doe">
+          <div class="card">
+            <div class="who"><i class="ring" aria-hidden="true"></i><span><small>Hi 👋</small>John Doe</span></div>
+            <p class="label">Monthly budget <em>This month</em></p>
+            <p class="left"><span data-left>€924.25</span> <small data-word>left</small></p>
+            <p class="spent" data-spent>€2,075.75 spent of €3,000</p>
+            <div class="chips">
+              <button type="button" data-cat="Grocery" data-amt="48"><img src="assets/cat/grocery.png" alt="" width="30" height="30">Grocery<b>€48</b></button>
+              <button type="button" data-cat="Dining" data-amt="32.5"><img src="assets/cat/dining.png" alt="" width="30" height="30">Dining<b>€32.50</b></button>
+              <button type="button" data-cat="Utilities" data-amt="64.2"><img src="assets/cat/utilities.png" alt="" width="30" height="30">Utilities<b>€64.20</b></button>
+            </div>
+          </div>
+          <ul class="rows" data-rows></ul>
+        </div>
+        <div class="phone back" data-who="Jane Doe">
+          <div class="card">
+            <div class="who"><i class="ring" aria-hidden="true"></i><span><small>Hi 👋</small>Jane Doe</span></div>
+            <p class="label">Monthly budget <em>This month</em></p>
+            <p class="left"><span data-left>€924.25</span> <small data-word>left</small></p>
+            <p class="spent" data-spent>€2,075.75 spent of €3,000</p>
+            <div class="chips">
+              <button type="button" data-cat="Pet" data-amt="18"><img src="assets/cat/pet.png" alt="" width="30" height="30">Pet<b>€18</b></button>
+              <button type="button" data-cat="Kids" data-amt="26"><img src="assets/cat/kids.png" alt="" width="30" height="30">Kids<b>€26</b></button>
+              <button type="button" data-cat="Travel" data-amt="86.4"><img src="assets/cat/travel.png" alt="" width="30" height="30">Travel<b>€86.40</b></button>
+            </div>
+          </div>
+          <ul class="rows" data-rows></ul>
+        </div>
+      </div>
+      <p class="hint"><span>Try it: tap a category on either phone. Names and amounts are made up.</span> <button type="button" class="link" id="reset" hidden>Start over</button></p>
+      <p class="sr" aria-live="polite" id="live"></p>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="how">
+  <div class="wrap">
+    <h2>At home it’s one pot. With friends, you settle up.</h2>
+    <p class="lead">Those are two different money questions, so BudgetBunch keeps them apart.</p>
+    <div class="pair">
+      <article>
+        <h3>Household</h3>
+        <p>Up to four people share one budget and one expense list. Nobody inside a household owes anybody. Set a limit for the month and a limit for each category, and everyone sees how close you are.</p>
+        <div class="fig" aria-label="Example category limits">
+          <div class="lim" style="--p:38%;--c:#5CC91E"><img src="assets/cat/grocery.png" alt="" width="26" height="26"><span>Grocery</span><b>€228.14 / €600</b></div>
+          <div class="lim warn" style="--p:88%"><img src="assets/cat/dining.png" alt="" width="26" height="26"><span>Dining</span><b>€176 / €200</b></div>
+          <div class="lim" style="--p:55%;--c:#2F7BFF"><img src="assets/cat/utilities.png" alt="" width="26" height="26"><span>Utilities</span><b>€82.50 / €150</b></div>
+          <div class="lim" style="--p:30%;--c:#FF3D9A"><img src="assets/cat/shopping.png" alt="" width="26" height="26"><span>Shopping</span><b>€75 / €250</b></div>
+        </div>
+      </article>
+      <article>
+        <h3>Planner</h3>
+        <p>For a trip, a dinner or a gift with people outside your home. Add who was there and who paid for what. When it ends, the planner works out the fewest payments that make it even.</p>
+        <div class="fig" aria-label="Example settlement">
+          <div class="ev"><span>Lisbon Trip<small>3 participants</small></span><b>€2,700<small>Total spent</small></b></div>
+          <div class="net"><span>John paid €1,000</span><b class="plus">+€100</b></div>
+          <div class="net"><span>Jack paid €900</span><b>€0</b></div>
+          <div class="net"><span>Jane paid €800</span><b class="minus">−€100</b></div>
+          <div class="pay"><span>Jane</span><svg viewBox="0 0 64 20" aria-hidden="true"><path d="M2 10h50"/><path d="M48 3l9 7-9 7"/></svg><span>John</span><b>€100</b></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <h2>From the receipt to the year.</h2>
+    <div class="shots">
+      <figure>
+        <div class="shot"><img src="assets/img/screen-add.webp" alt="Add Expense sheet with nineteen categories" width="640" height="1327" loading="lazy"></div>
+        <figcaption><b>Pick a category, type the amount</b>Nineteen categories are ready to use, in US dollars, euros or pounds. Members can also speak an expense in English or make their own category.</figcaption>
+      </figure>
+      <figure>
+        <div class="shot"><img src="assets/img/screen-insights.webp" alt="Insights screen with this month’s spending by category" width="640" height="1327" loading="lazy"></div>
+        <figcaption><b>See where this month went</b>Insights splits the month by category and shows what the household has left. Look at everyone together or one person at a time.</figcaption>
+      </figure>
+      <figure>
+        <div class="shot"><img src="assets/img/screen-trend.webp" alt="Spending screen with the year as a line against the budget" width="640" height="1327" loading="lazy"></div>
+        <figcaption><b>Follow the line against your budget</b>The spending trend runs through the month or the year, for everything or for one category. Part of membership.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="privacy">
+  <div class="wrap">
+    <h2>Your records stay yours.</h2>
+    <dl class="facts">
+      <div><dt>No bank connection</dt><dd>BudgetBunch never asks for a bank login. You enter what you want to track.</dd></div>
+      <div><dt>Analytics off until you allow it</dt><dd>The app asks once and sends nothing before you say yes. Amounts, names, notes and categories are never included.</dd></div>
+      <div><dt>Never locked behind a payment</dt><dd>If you don’t pay, or stop paying, you can still read, export and delete everything you recorded.</dd></div>
+      <div><dt>Deleted when you say so</dt><dd>You can <a href="delete-account.html">delete your account</a> inside the app. It shows you what will happen first.</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="band" id="membership">
+  <div class="wrap">
+    <h2>Free to use. Membership to share and look back.</h2>
+    <p class="lead">One paying member covers a household of up to four. The planner is per person.</p>
+    <div class="plans">
+      <div class="plan">
+        <h3>Free</h3>
+        <ul>
+          <li>Your own expenses, without a cap</li>
+          <li>Monthly and category limits</li>
+          <li>This month in Insights</li>
+          <li>Joining a household you were invited to</li>
+          <li>Reading, exporting and deleting your data</li>
+        </ul>
+      </div>
+      <div class="plan gold">
+        <h3>Membership <span class="tag">Premium</span></h3>
+        <ul>
+          <li>Inviting people into your household</li>
+          <li>Spending trend, yearly view and custom dates</li>
+          <li>Voice entry</li>
+          <li>Expenses that repeat every month</li>
+          <li>Your own categories</li>
+          <li>Creating events in the planner and adding to them</li>
+        </ul>
+      </div>
+    </div>
+    <p class="note">Membership is not on sale yet. The App Store or Google Play will show you the price before you buy.</p>
+  </div>
+</section>
+
+<section class="band faq" id="questions">
+  <div class="wrap">
+    <h2>Questions</h2>
+    <div class="qa">
+      <details open><summary>Does everyone in the household have to pay?</summary><p>No. Joining is always free, and people in your household can use its premium features as long as one member pays. The planner is the exception: each person needs their own membership to add to it.</p></details>
+      <details><summary>How do I invite someone?</summary><p>Open Profile, then Invite &amp; Join, and share your code. They enter it on the same screen on their phone.</p></details>
+      <details><summary>Can the others see everything I add?</summary><p>Yes. A household has one expense list that all its members can read, so join only with people you trust with it. Only you can edit or remove what you recorded.</p></details>
+      <details><summary>Which phones does it run on?</summary><p>iPhone and Android, with the same account on both. The app is in English.</p></details>
+      <details><summary>Who can use it?</summary><p>Anyone aged 16 or older.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="end">
+  <div class="wrap">
+    <h2>One household, one number.</h2>
+    <p class="soon">Coming soon to iPhone and Android</p>
+  </div>
+</section>
+
+</main>
+<footer class="foot">
+  <div class="wrap foot-row">
+    <div class="foot-brand">
+      <a class="brand" href="index.html"><img src="assets/img/icon-180.png" alt="" width="34" height="34">BudgetBunch</a>
+      <p>Built and run by one person in Portugal.</p>
+    </div>
+    <nav aria-label="Footer">
+      <a href="support.html">Support</a>
+      <a href="delete-account.html">Delete your account</a>
+      <a href="legal/privacy.html">Privacy Policy</a>
+      <a href="legal/terms.html">Terms of Service</a>
+      <a href="mailto:support@budgetbunch.com">support@budgetbunch.com</a>
+    </nav>
+    <p class="fine">This website sets no cookies and runs no analytics.</p>
+  </div>
+</footer>
+<script src="assets/main.js" defer></script>
+</body>
+</html>

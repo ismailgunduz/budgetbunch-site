@@ -102,6 +102,9 @@ h3{font-size:1.4rem;font-weight:600;line-height:1.25}
 .pay svg{flex:1;max-width:64px;height:20px;fill:none;stroke:#fff;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
 .pay b{margin-left:auto;font-weight:700}
 
+.film{display:block;width:100%;height:auto;aspect-ratio:16/9;margin-top:36px;border:2px solid #37324F;border-radius:28px;background:#0B0C10}
+.film+.note{margin-top:14px}
+
 .shots{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(24px,4vw,56px);margin-top:48px}
 .shots figure{display:grid;gap:22px;align-content:start}
 .shot{border:2px solid #37324F;border-radius:40px;overflow:hidden;background:#0B0C10}
@@ -178,6 +181,7 @@ td{color:#D5D6DF}
   .foot nav{flex-direction:column;justify-content:flex-start}
 }
 @media (max-width:540px){
+  .film{border-radius:18px;margin-top:24px}
   /* İki telefon alt alta binerek: John tam, Jane'in kartı aynı sayıyla altında */
   .phones{grid-template-columns:minmax(0,1fr);gap:14px}
   .phone{height:auto;padding-bottom:16px}
